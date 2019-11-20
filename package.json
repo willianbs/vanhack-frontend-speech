@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/creativetimofficial/styles-design-system-react.git"
+    "url": "git+https://github.com/willianbs/vhk-frontend-speech/"
   },
   "keywords": [
     "react",
@@ -14,9 +14,9 @@
   "author": "Will Silveira",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/creativetimofficial/styles-design-system-react/issues"
+    "url": "https://github.com/willianbs/vhk-frontend-speech/issues"
   },
-  "homepage": "https://github.com/creativetimofficial/styles-design-system-react#readme",
+  "homepage": "https://github.com/willianbs/vhk-frontend-speech#readme",
   "dependencies": {
     "chart.js": "2.7.3",
     "classnames": "2.2.6",

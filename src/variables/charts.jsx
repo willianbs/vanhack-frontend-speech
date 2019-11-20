@@ -1,4 +1,4 @@
-// used inside src/views/examples/ResultsPage.jsx
+// used inside src/views/pages/ResultsPage.jsx
 const bigChart = {
   data: canvas => {
     let ctx = canvas.getContext("2d");

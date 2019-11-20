@@ -192,7 +192,7 @@ class Navbars extends React.Component {
           <h3 className="title mb-3">Navigation</h3>
         </Container>
         <div id="navbar">
-          <div className="navigation-example">
+          <div className="navigation-default">
             {/* Navbar Primary */}
             <Navbar className="bg-primary" expand="lg">
               <Container>

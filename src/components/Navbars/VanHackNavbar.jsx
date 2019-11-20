@@ -18,7 +18,7 @@ class PagesNavbar extends React.Component {
     super(props);
     this.state = {
       collapseOpen: false,
-      color: "navbar-transparent"
+      color: ""
     };
   }
   componentDidMount() {
@@ -119,7 +119,7 @@ class PagesNavbar extends React.Component {
             </div>
             <Nav navbar>
               <NavItem>
-                <NavLink href="https://github.com/creativetimofficial/styles-design-system-react/issues">
+                <NavLink href="https://github.com/willianbs/vhk-frontend-speech/issues">
                   Have an issue?
                 </NavLink>
               </NavItem>

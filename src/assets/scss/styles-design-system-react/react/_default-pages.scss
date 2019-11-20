@@ -1,0 +1,11 @@
+// style for the results page
+.index-page .squares {
+  @include linear-gradient($info-states, $info);
+}
+.results-page,
+.section.section-signup {
+  .squares,
+  .square {
+    @include linear-gradient($primary-states, $primary);
+  }
+}

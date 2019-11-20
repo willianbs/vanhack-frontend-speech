@@ -1,68 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Vanhack English Pre-Test
 
-## Available Scripts
+_This is was a submission to [Vanhack](https://www.vanhack.com) for vanhackathon 2019_
 
-In the project directory, you can run:
+## Overview
 
-### `yarn start`
+### Demo
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+You can access and test your proficiency [here](https://google.com)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+#### Install and run
 
-### `yarn test`
+For instructions for the **Backend**, please [click here](https://github.com/willianbs/vhk-backend-speech/).
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+For the **Frontend**, you just need to run as a default React app:
 
-### `yarn build`
+`git clone https://github.com/willianbs/vhk-frontend-speech.git`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Go to the project directory and use:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+`npm install` or `yarn`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+After all dependencies are downloaded, use: `npm start`
 
-### `yarn eject`
+Open <http://localhost:3000> to view it in the browser.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Design and Architecture
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Frontend App
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+A lightweight React.js app
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Backend API
 
-## Learn More
+The backend api was implemented as a Python simple server with Flask to deal with the upload request and the speech analysis. No login required at this time.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## About the project
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Problem
 
-### Code Splitting
+One important part of VanHack process is the English verification process.
+It needs a real person to evaluate all entries and it can take a lot of time of a small team.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### Solution
 
-### Analyzing the Bundle Size
+My idea can go 2 ways (or both):
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- Using as a tool for the users (Premium only?) to test their proficiency before submitting each video. So they'll know if they've performed well enough to get a good grade.
+- As an auto evaluation system for the Staff to reject/approve based on AI and if the machine isn't able to get it right or there's a claim, the Staff can optimize the work.
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+And that's about it :)

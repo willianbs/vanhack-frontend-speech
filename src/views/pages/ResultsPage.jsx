@@ -123,7 +123,7 @@ class ResultsPage extends React.Component {
                   <img
                     alt="..."
                     className="img-fluid"
-                    src={require("assets/img/etherum.png")}
+                    src={require("assets/img/mike.jpg")}
                   />
                 </Col>
               </Row>
@@ -337,7 +337,7 @@ class ResultsPage extends React.Component {
                   <img
                     alt="..."
                     className="img-fluid floating"
-                    src={require("assets/img/chester-wade.jpg")}
+                    src={require("assets/img/lora.jpg")}
                   />
                   <Card className="card-stats bg-danger">
                     <CardBody>
@@ -470,13 +470,7 @@ class ResultsPage extends React.Component {
               <Row>
                 <Col md="4">
                   <Card className="card-coin card-plain">
-                    <CardHeader>
-                      <img
-                        alt="..."
-                        className="img-center img-fluid"
-                        src={require("assets/img/bitcoin.png")}
-                      />
-                    </CardHeader>
+                    <CardHeader>IMG</CardHeader>
                     <CardBody>
                       <Row>
                         <Col className="text-center" md="12">
@@ -506,7 +500,7 @@ class ResultsPage extends React.Component {
                       <img
                         alt="..."
                         className="img-center img-fluid"
-                        src={require("assets/img/etherum.png")}
+                        src={require("assets/img/lora.jpg")}
                       />
                     </CardHeader>
                     <CardBody>
@@ -538,7 +532,7 @@ class ResultsPage extends React.Component {
                       <img
                         alt="..."
                         className="img-center img-fluid"
-                        src={require("assets/img/ripp.png")}
+                        src={require("assets/img/james.jpg")}
                       />
                     </CardHeader>
                     <CardBody>
