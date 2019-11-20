@@ -1,0 +1,100 @@
+
+
+// Core
+
+@import "styles-design-system-react/custom/functions";
+@import "styles-design-system-react/bootstrap/functions";
+
+@import "styles-design-system-react/custom/variables";
+@import "styles-design-system-react/bootstrap/variables";
+
+@import "styles-design-system-react/custom/mixins";
+@import "styles-design-system-react/bootstrap/mixins";
+
+// Bootstrap components
+
+@import "styles-design-system-react/bootstrap/root";
+@import "styles-design-system-react/bootstrap/reboot";
+@import "styles-design-system-react/bootstrap/type";
+@import "styles-design-system-react/bootstrap/images";
+@import "styles-design-system-react/bootstrap/code";
+@import "styles-design-system-react/bootstrap/grid";
+@import "styles-design-system-react/bootstrap/tables";
+@import "styles-design-system-react/bootstrap/forms";
+@import "styles-design-system-react/bootstrap/buttons";
+@import "styles-design-system-react/bootstrap/transitions";
+@import "styles-design-system-react/bootstrap/dropdown";
+@import "styles-design-system-react/bootstrap/button-group";
+@import "styles-design-system-react/bootstrap/input-group";
+@import "styles-design-system-react/bootstrap/custom-forms";
+@import "styles-design-system-react/bootstrap/nav";
+@import "styles-design-system-react/bootstrap/navbar";
+@import "styles-design-system-react/bootstrap/card";
+@import "styles-design-system-react/bootstrap/breadcrumb";
+@import "styles-design-system-react/bootstrap/pagination";
+@import "styles-design-system-react/bootstrap/badge";
+@import "styles-design-system-react/bootstrap/jumbotron";
+@import "styles-design-system-react/bootstrap/alert";
+@import "styles-design-system-react/bootstrap/progress";
+@import "styles-design-system-react/bootstrap/media";
+@import "styles-design-system-react/bootstrap/list-group";
+@import "styles-design-system-react/bootstrap/close";
+@import "styles-design-system-react/bootstrap/modal";
+@import "styles-design-system-react/bootstrap/tooltip";
+@import "styles-design-system-react/bootstrap/popover";
+@import "styles-design-system-react/bootstrap/carousel";
+@import "styles-design-system-react/bootstrap/utilities";
+@import "styles-design-system-react/bootstrap/print";
+
+// Custom components
+
+@import "styles-design-system-react/custom/alerts.scss";
+@import "styles-design-system-react/custom/buttons.scss";
+@import "styles-design-system-react/custom/dropdown.scss";
+@import "styles-design-system-react/custom/footer.scss";
+@import "styles-design-system-react/custom/forms.scss";
+@import "styles-design-system-react/custom/images.scss";
+@import "styles-design-system-react/custom/modal.scss";
+@import "styles-design-system-react/custom/navbar.scss";
+@import "styles-design-system-react/custom/type.scss";
+@import "styles-design-system-react/custom/icons.scss";
+@import "styles-design-system-react/custom/tables";
+@import "styles-design-system-react/custom/checkboxes-radio";
+@import "styles-design-system-react/custom/fixed-plugin";
+@import "styles-design-system-react/custom/pagination.scss";
+@import "styles-design-system-react/custom/misc.scss";
+@import "styles-design-system-react/custom/rtl.scss";
+@import "styles-design-system-react/custom/input-group.scss";
+@import "styles-design-system-react/custom/example-pages.scss";
+@import "styles-design-system-react/custom/progress.scss";
+@import "styles-design-system-react/custom/badge.scss";
+@import "styles-design-system-react/custom/pills.scss";
+@import "styles-design-system-react/custom/tabs.scss";
+@import "styles-design-system-react/custom/info-areas.scss";
+
+// Sections
+@import "styles-design-system-react/custom/sections.scss";
+
+// Vendor / Plugins
+
+@import "styles-design-system-react/custom/vendor/plugin-perfect-scrollbar.scss";
+@import "styles-design-system-react/custom/vendor/plugin-animate-bootstrap-notify.scss";
+@import "styles-design-system-react/custom/vendor/plugin-bootstrap-switch.scss";
+@import "styles-design-system-react/custom/vendor/plugin-nouislider.scss";
+@import "styles-design-system-react/custom/vendor/plugin-datetimepicker.scss";
+
+// Cards
+
+@import "styles-design-system-react/custom/card";
+@import "styles-design-system-react/custom/cards/card-chart";
+@import "styles-design-system-react/custom/cards/card-map";
+@import "styles-design-system-react/custom/cards/card-user";
+@import "styles-design-system-react/custom/cards/card-task";
+@import "styles-design-system-react/custom/cards/card-plain";
+@import "styles-design-system-react/custom/cards/card-register";
+@import "styles-design-system-react/custom/cards/card-stats";
+@import "styles-design-system-react/custom/cards/card-chart";
+
+// React Differences
+
+@import "styles-design-system-react/react/react-differences";
