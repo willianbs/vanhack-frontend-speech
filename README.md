@@ -4,11 +4,7 @@ _This is was a submission to [Vanhack](https://www.vanhack.com) for vanhackathon
 
 ## Overview
 
-### Demo
-
-You can access and test your proficiency [here](https://google.com)
-
-#### Install and run
+### Install and run
 
 For instructions for the **Backend**, please [click here](https://github.com/willianbs/vhk-backend-speech/).
 

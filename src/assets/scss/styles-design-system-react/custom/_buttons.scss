@@ -105,7 +105,7 @@
 // Apply the mixin to the buttons
 // .btn-default { @include btn-styles($default-color, $default-states-color); }
 .btn-primary {
-  @include btn-styles($primary, $primary-states);
+  @include btn-styles($primary, $secondary);
 }
 .btn-success {
   @include btn-styles($success, $success-states);
@@ -243,7 +243,7 @@
 .btn-secondary:not(:disabled):not(.disabled):active,
 .btn-secondary:not(:disabled):not(.disabled).active,
 .show > .btn-secondary.dropdown-toggle {
-  color: $black;
+  color: $white;
 }
 
 .btn-group label.btn.active {

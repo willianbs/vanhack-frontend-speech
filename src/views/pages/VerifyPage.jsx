@@ -1,24 +1,15 @@
 import React from "react";
-import classnames from "classnames";
+import VideoRecorder from "react-video-recorder";
 // javascript plugin used to create scrollbars on windows
-import PerfectScrollbar from "perfect-scrollbar";
+import api from "../../services/api";
 // reactstrap components
 import {
   Button,
   Card,
   CardHeader,
   CardBody,
-  Label,
-  FormGroup,
-  Input,
-  FormText,
-  NavItem,
-  NavLink,
-  Nav,
-  Table,
-  TabContent,
-  TabPane,
   Container,
+  UncontrolledAlert,
   Row,
   Col
 } from "reactstrap";
@@ -26,39 +17,56 @@ import {
 // core components
 import VanHackNavbar from "components/Navbars/VanHackNavbar";
 
-let ps = null;
-
 class VerifyPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      tabs: 1
+      recorded: false,
+      score: -1,
+      uploadedFile: "",
+      isLoading: false
     };
   }
   componentDidMount() {
-    if (navigator.platform.indexOf("Win") > -1) {
-      document.documentElement.className += " perfect-scrollbar-on";
-      document.documentElement.classList.remove("perfect-scrollbar-off");
-      let tables = document.querySelectorAll(".table-responsive");
-      for (let i = 0; i < tables.length; i++) {
-        ps = new PerfectScrollbar(tables[i]);
-      }
-    }
     document.body.classList.toggle("verify-page");
   }
   componentWillUnmount() {
-    if (navigator.platform.indexOf("Win") > -1) {
-      ps.destroy();
-      document.documentElement.className += " perfect-scrollbar-off";
-      document.documentElement.classList.remove("perfect-scrollbar-on");
-    }
     document.body.classList.toggle("verify-page");
   }
-  toggleTabs = (e, stateName, index) => {
-    e.preventDefault();
-    this.setState({
-      [stateName]: index
+  handleRecordingComplete = e => {
+    this.setState({ uploadedFile: e });
+    this.setState({ recorded: true });
+  };
+  uploadFileRequest = async file => {
+    const data = new FormData();
+
+    data.append("file", file, "upload.webm");
+
+    return api.post(`/file-upload`, data, {
+      headers: {
+        "Content-Type": `multipart/form-data; boundary=${data._boundary}`
+      },
+      timeout: 30000
     });
+  };
+  handleNewVideo = e => {
+    this.setState({ recorded: false });
+  };
+  actionHandler = () => {};
+  submitButton = async () => {
+    this.setState({ isLoading: true });
+    try {
+      const res = await this.uploadFileRequest(this.state.uploadedFile);
+      this.setState({ score: Math.round(res.data.result * 100) / 100 });
+      this.setState({ recorded: false });
+    } catch (err) {
+      this.setState({ isLoading: false });
+      this.setState({ recorded: false });
+      this.setState({ score: -1 });
+      alert("An error was found. Try again later.");
+      console.error(err);
+    }
+    this.setState({ isLoading: false });
   };
   render() {
     return (
@@ -84,6 +92,37 @@ class VerifyPage extends React.Component {
                     Constantly Improving our app to give you the most accurate
                     results.
                   </p>
+                  {this.state.score !== -1 && this.state.score > 65 && (
+                    <UncontrolledAlert
+                      className="alert-with-icon"
+                      color="success"
+                    >
+                      <span
+                        data-notify="icon"
+                        className="tim-icons icon-bell-55"
+                      />
+                      <span>
+                        <b>{this.state.score} of 100</b>
+                        <br />
+                        Well done!
+                      </span>
+                    </UncontrolledAlert>
+                  )}
+                  {this.state.score !== -1 && this.state.score <= 65 && (
+                    <UncontrolledAlert
+                      className="alert-with-icon"
+                      color="warning"
+                    >
+                      <span
+                        data-notify="icon"
+                        className="tim-icons icon-bulb-63"
+                      />
+                      <span>
+                        <b>Score: {this.state.score} of 100</b> <br />
+                        Please try again, your score was too low...
+                      </span>
+                    </UncontrolledAlert>
+                  )}
                 </Col>
                 <Col className="ml-auto mr-auto" lg="6" md="8">
                   <Card className="card-coin card-plain">
@@ -93,9 +132,32 @@ class VerifyPage extends React.Component {
                         className="img-center img-fluid rounded-circle"
                         src={require("assets/img/mike.jpg")}
                       />
-                      <h4 className="title">00:00</h4>
+                      {this.state.isLoading && (
+                        <div>Please wait, we are processing your file...</div>
+                      )}
                     </CardHeader>
-                    <CardBody>VIDEO HERE</CardBody>
+                    <CardBody>
+                      <VideoRecorder
+                        onTurnOnCamera={this.actionHandler.bind(this)}
+                        onTurnOffCamera={this.actionHandler.bind(this)}
+                        onStartRecording={this.handleNewVideo.bind(this)}
+                        onStopRecording={this.actionHandler.bind(this)}
+                        onRecordingComplete={this.handleRecordingComplete.bind(
+                          this
+                        )}
+                        onOpenVideoInput={this.actionHandler.bind(this)}
+                        onStopReplaying={this.actionHandler.bind(this)}
+                        onError={this.actionHandler.bind(this)}
+                        timeLimit={45000}
+                      />
+                      <div className="btn-wrapper">
+                        {this.state.recorded && (
+                          <Button color="primary" onClick={this.submitButton}>
+                            Submit video
+                          </Button>
+                        )}
+                      </div>
+                    </CardBody>
                   </Card>
                 </Col>
               </Row>
