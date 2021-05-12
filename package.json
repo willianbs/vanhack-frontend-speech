@@ -19,7 +19,7 @@
   "homepage": "https://github.com/willianbs/vhk-frontend-speech#readme",
   "dependencies": {
     "axios": "^0.19.0",
-    "chart.js": "2.7.3",
+    "chart.js": "2.9.4",
     "classnames": "2.2.6",
     "moment": "2.24.0",
     "node-sass": "4.11.0",
